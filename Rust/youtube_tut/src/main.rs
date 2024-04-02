@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     println!("Hello, world!");
 
@@ -76,5 +78,53 @@ fn main() {
     // have to define the type when defining a constant
     // u32 is an unsigned interger
     // cannot be redefined once this has been set
+
+    // in Rust, libraries are called crates
+    // inside of these crates exists modules that can be imported indivicually
+    // use std::io; will import the I/O module from the standard crate (std)
+    let mut input = String::new();
+
+    io::stdin().read_line(&mut input).expect("failed to read line");
+    //.expect will catch any errors that may occur
+    // the read_line functions returns a result object
+    println!("{}", input);
+
+    let x: u8 = 23; // 0 - 255
+    let y: u8 = 10; // -128 - +127
+    let z = x + y; // must be 0 =< z =< 255
+    println!("{}", z);
+    // must add varaibles of the same data type
+    // cannot exceed the MAX value of the data type in the above case z couldn't be greater than 255
+    let w = x / y; // intergers divided by intergers will return an interger and remainder will be discarded
+    println!("{}", w);
+
+    let v = x * y; // multiplication
+    println!("{}", v);
+
+    let u = x % y; // is the mod operator which will return the remainder only
+    println!("{}", u);
+
+    let a = 127_000 as i64; // another way to specify the data type of a variable
+    let b = 10_i32; // same as above variable
+    let c = x / (y as i64); // this will allow you to perform the desired operation by treating the originally i32 variable as a i64 for this line of code only
+                            // so that the code compiles without any errors () are not needed around the y as i64
+    println!("{}", c);
+
+    let xx = (i32::MAX as i64) + 1;
+    let yy = 10_i32;
     
+    let zz = x as i32 / y; // compiler will not catch this error, BE CAREFUL WHEN YOU TYPE CAST
+    println!("{}", zz);
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("failed to read line");
+    let in_input: i64 = input.trim().parse().unwrap(); 
+    // trim() is a method that can be called on strings that will return the escape character/new line character
+    // parse() is a method that will parse the string for any characters that can be converted into a i64 interger
+    // unwrap() will remove the interger that is found from the rest of the string and convert it to the type specified
+    
+    println!("{}", int_input + 2);
+    
+
+
 }
