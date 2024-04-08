@@ -24,8 +24,8 @@ fn main() {
     // the above code is in a different scope from the indented curly braces {}
     // this will allow the code to run normally as well as only run inside this scope
 
-    let x = x + 1;
-    println!("x is: {}", x);
+    // let x = x + 1;
+    // println!("x is: {}", x);
     // interger values can be of type i8, i16, i32, i64, & i128 which are all signed intergers
     // default type is i32
     // can also use unsigned intergers, i.e. u32
@@ -54,8 +54,8 @@ fn main() {
     println!("the second element in the tuple is:{}", tup.1);
     // use the .(indecies of the tuple) to print individual characters
     // can change individual indicies when the mut key word is used when defining the tuple
-    let tup.0 = 5;
-    println!("the first element in the tuple is:{}", tup.0);
+    // let tup.0 = 5;
+    // println!("the first element in the tuple is:{}", tup.0);
     // change all of the elements in a tuple by explicitly stating the new types in an assingment statement
     // let tup = (24, false, 'b');
     //println!("the first element in the tuple is:{}", tup.0);
