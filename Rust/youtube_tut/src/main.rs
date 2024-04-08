@@ -124,6 +124,11 @@ fn main() {
     // unwrap() will remove the interger that is found from the rest of the string and convert it to the type specified
     
     println!("{}", int_input + 2);
+
+    // Conditional statements
+    let cond = 2 < 4;
+    println!("{}", cond);
+    
     
 
 
